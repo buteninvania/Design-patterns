@@ -1,0 +1,14 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "\"Practicing design patterns\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.html"
+  },
+  "author": "\"Butenin Ivan\"",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
+}
