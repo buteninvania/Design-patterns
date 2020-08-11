@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {humidity, pressure, stan, temperature} from "./2.Pattern-Observer/weather-station";
+import WeatherDataForm from "./Components/FormWeatherData/WeatherData";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const updateValues = stan.setMeasurements()
+    return (
+        <div className="App">
+            <div>{temperature.display()}</div>
+            <div>{humidity.display()}</div>
+            <div>{pressure.display()}</div>
+            <WeatherDataForm updateValues={updateValues}/>
+        </div>
+    );
 }
 
 export default App;

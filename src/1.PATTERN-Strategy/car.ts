@@ -37,7 +37,7 @@ abstract class Moto {
     }
 }
 
-export interface BeepBehavior {
+interface BeepBehavior {
     beep(model:any):any
 }
 class AutoBeep implements BeepBehavior {
